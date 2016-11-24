@@ -6,8 +6,6 @@ env:
         - SELECT_BUILDS=idp2_full
         - SELECT_BUILDS=idp3_full
 
-install: "pip install -r requirements.txt"
-
 sudo: required
 
 services:
