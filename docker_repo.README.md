@@ -1,5 +1,4 @@
-Docker images for [Intel Distribution for
-Python](https://software.intel.com/en-us/intel-distribution-for-python)
+Docker images for [Intel Distribution for Python](https://software.intel.com/en-us/intel-distribution-for-python)
 
 Images:
 
@@ -11,7 +10,8 @@ Images:
 The core images are based on intelpython{2,3}_core and the full images are
 based on intelpython{2,3}_core.
 
-Python is on the path
+The image will start with a bash shell and python on the path
+
 
 
 

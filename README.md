@@ -5,7 +5,7 @@ There is 1 subdirectory for every image to build.
 
 ## testing
 
-    python -m pytest tests
+        python -m pytest tests
 
 Will build every image.
 
@@ -21,7 +21,7 @@ Will build every image.
 * Edit docker_repo.README.md
 * Copy to all repos
 
-    PYTHONPATH=. scripts/update_readmes.py
+        PYTHONPATH=. python scripts/update_readmes.py
 
 ## Publishing a new release
 
@@ -29,15 +29,15 @@ Will build every image.
 * Commit changes
 * Tag with the release name
 
-    git tag -a 2017.0.0 -m 'new release'
+        git tag -a 2017.0.0 -m 'new release'
 
-* On dockerhub, edit build settings for all repos to change build rule that generates the image with the latest tag
 * Push changes, this will trigger testing on travis-ci
 
-    git push
+        git push
 
+* On dockerhub, edit build settings for all repos to change build rule that generates the image with the latest tag
 * When travis-ci testing completes, push the tag
 
-    git push origin 2017.0.0
+        git push origin 2017.0.0
 
 * Check later that all builds have completed on docker hub
