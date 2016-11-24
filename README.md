@@ -13,7 +13,7 @@ Will build every image.
 
 * copy one of the the existing directories
 * edit the dockerfile
-* add the directory name in test/test_build.py
+* add the directory name in test/test_build.py and .travis.yml
 * create a new automated build on docker hub, copying build setting of existing image
 
 ## Publishing a new release
@@ -23,7 +23,8 @@ Will build every image.
 * Tag with the release name
     git tag -a 2017.0.0 -m 'new release'
 * On dockerhub, edit build settings for all repos to change build rule that generates the image with the latest tag
-* Push changes and tag
+* Push changes, this will trigger testing on travis-ci
     git push
+* When travis-ci testing completes, push the tag
     git push origin 2017.0.0
 * Check later that all builds have completed on docker hub
