@@ -1,7 +1,7 @@
 # container-images
 Dockerfiles for building docker images
 
-There is 1 subdirectory for every image to build. They share a README by symlinking to docker_repo.README.md.
+There is 1 subdirectory for every image to build.
 
 ## testing
 
@@ -13,8 +13,15 @@ Will build every image.
 
 * copy one of the the existing directories
 * edit the dockerfile
-* add the directory name in test/test_build.py and .travis.yml
+* add the directory name in test/test_build.py,.travis.yml, and scripts/images.py
 * create a new automated build on docker hub, copying build setting of existing image
+
+## Editing the description files
+
+* Edit docker_repo.README.md
+* Copy to all repos
+
+    PYTHONPATH=. scripts/update_readmes.py
 
 ## Publishing a new release
 
