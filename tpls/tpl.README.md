@@ -14,4 +14,5 @@ Images:
 * intelpython3_core
 * intelpython3_full
 
-The image defaults to starting with a bash shell. Intel Python is on the path
+The image defaults to starting with a bash shell. Intel Python is on the path.
+
