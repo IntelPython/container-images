@@ -71,6 +71,7 @@ class Conf(dict):
         print('    ',cmd)
         subprocess.check_call(cmd, shell=True)
 
+# Add new configurations here
 all_confs = [Conf(2,'core'),
              Conf(2,'full'),
              Conf(3,'core'),

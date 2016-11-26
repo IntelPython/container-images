@@ -7,25 +7,17 @@ There is 1 subdirectory for every image to build.
 
         python -m pytest tests
 
-Will build every image.
+Will build every image. Look at the test for example command lines.
 
 ## Adding an image
 
 * copy one of the the existing directories
-* edit the dockerfile
-* add the directory name in test/test_build.py,.travis.yml, and scripts/images.py
+* See .travis.yml & images.py for directions on adding a new configuration
 * create a new automated build on docker hub, copying build setting of existing image
-
-## Editing the description files
-
-* Edit docker_repo.README.md
-* Copy to all repos
-
-        PYTHONPATH=. python scripts/update_readmes.py
 
 ## Publishing a new release
 
-* Edit the Dockerfiles to refer to the new release
+* Change release name in images.py
 * Commit changes
 * Tag with the release name
 
@@ -35,7 +27,6 @@ Will build every image.
 
         git push
 
-* On dockerhub, edit build settings for all repos to change build rule that generates the image with the latest tag
 * When travis-ci testing completes, push the tag
 
         git push origin 2017.0.0

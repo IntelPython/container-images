@@ -1,5 +1,7 @@
 language: python
 
+# We use env to test the configurations in parallel. 
+# Add new configurations here
 env:
         - IDP_CONF=intelpython2_core
         - IDP_CONF=intelpython2_full
