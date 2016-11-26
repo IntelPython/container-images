@@ -6,4 +6,4 @@ MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
 ENV ACCEPT_INTEL_PYTHON_EULA=yes
 
 RUN conda config --add channels intel \
-    && conda install -y -q intelpython2_core=2017.0.0 python=2
+    && conda install -y -q intelpython2_core=2017.0.1 python=2
