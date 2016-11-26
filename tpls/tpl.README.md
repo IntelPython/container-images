@@ -5,8 +5,7 @@ Tags:
 * 2017.0.1, latest
 * 2017.0.0
 
-There is 1 image for every install configuration. A conda environment called
-idp is created and activated.
+There is 1 image for every install configuration.
 
 Images:
 
@@ -15,8 +14,4 @@ Images:
 * intelpython3_core
 * intelpython3_full
 
-The image defaults to starting with a bash shell.
-
-
-
-
+The image defaults to starting with a bash shell. Intel Python is on the path

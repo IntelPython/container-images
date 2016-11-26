@@ -17,7 +17,7 @@ Will build every image. Look at the test for example command lines.
 
 ## Publishing a new release
 
-* Change release name in images.py
+* Change release name in images.py, and add it to tpls/tpl.README.md
 * Commit changes
 * Tag with the release name
 
