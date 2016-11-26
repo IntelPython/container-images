@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import argparse
 import getpass
 import jinja2
@@ -5,6 +7,7 @@ import os
 import re
 import subprocess
 import sys
+
 
 def get_proxies():
     '''Pass through proxies to docker container'''
@@ -17,17 +20,20 @@ def get_proxies():
 class Templates():
     '''singleton to render the templates'''
     def __init__(self):
-        loader = jinja2.FileSystemLoader(searchpath = '.')
+        loader = jinja2.FileSystemLoader(searchpath = 'tpls')
         env = jinja2.Environment(loader=loader)
         self._readme = env.get_template('tpl.README.md')
         self._dockerfile = env.get_template('tpl.Dockerfile')
+        self._post_push = env.get_template('tpl.post_push')
 
     def render(self, conf):
         name = conf.name()
-        with open('%s/README.md' % name,'wb') as fh:
+        with open('configs/%s/README.md' % name,'wb') as fh:
             fh.write(self._readme.render(conf).encode('utf-8'))
-        with open('%s/Dockerfile' % name,'wb') as fh:
+        with open('configs/%s/Dockerfile' % name,'wb') as fh:
             fh.write(self._dockerfile.render(conf).encode('utf-8'))
+        with open('configs/%s/hooks/post_push' % name,'wb') as fh:
+            fh.write(self._post_push.render(conf).encode('utf-8'))
 
 # singleton
 templates = Templates()
@@ -56,7 +62,7 @@ class Conf(dict):
         templates.render(self)
 
     def build(self):
-        cmd = 'docker build %s -t %s --file %s/Dockerfile .' % (get_proxies(),self.tag(),self.name())
+        cmd = 'docker build %s -t %s --file configs/%s/Dockerfile configs/%s' % (get_proxies(),self.tag(),self.name(),self.name())
         print('    ',cmd)
         subprocess.check_call(cmd, shell=True)
 
