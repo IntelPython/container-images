@@ -1,10 +1,10 @@
 language: python
 
 env:
-        - SELECT_BUILDS=idp2_core
-        - SELECT_BUILDS=idp3_core
-        - SELECT_BUILDS=idp2_full
-        - SELECT_BUILDS=idp3_full
+        - IDP_CONF=intelpython2_core
+        - IDP_CONF=intelpython2_full
+        - IDP_CONF=intelpython3_core
+        - IDP_CONF=intelpython3_full
 
 sudo: required
 
@@ -12,8 +12,4 @@ services:
         - docker
 
 script:
-        - python -m pytest tests
-
-branches:
-  only:
-  - master
+        - python images.py --test $IDP_CONF
