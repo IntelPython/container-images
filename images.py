@@ -50,7 +50,8 @@ class Conf(dict):
             (pyver,package) = parse_name(name)
         self['pyver'] = pyver
         self['package'] = package
-        self['release'] = '2017.0.1'
+        self['release'] = '2017.0.0-2'
+        self['update_version'] = '2017.0.0'
 
     def name(self):
         return 'intelpython%d_%s' % (self['pyver'],self['package'])
