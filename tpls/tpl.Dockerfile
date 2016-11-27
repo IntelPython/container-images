@@ -6,5 +6,5 @@ MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
 ENV ACCEPT_INTEL_PYTHON_EULA=yes
 
 RUN conda config --add channels intel \
-    && conda install -y -q intelpython{{pyver}}_{{package}}={{release}} python={{pyver}}
+    && conda install -y -q intelpython{{pyver}}_{{package}}={{update_number}}={{build_number}} python={{pyver}}
 

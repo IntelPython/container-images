@@ -1,7 +1,13 @@
 # container-images
-Dockerfiles for building docker images
 
-There is 1 subdirectory for every image to build.
+Dockerfiles and build contexts for building docker images
+
+There is 1 subdirectory for every image to build. Dockerfiles and build
+contexts are generated from jinja2 templates in tpls directory. The images.py
+script generates the files, and can also be used to build docker images and to
+test them. To see more info do:
+
+        python images.py --help
 
 ## testing
 
@@ -17,15 +23,19 @@ Will build every image. Look at the test for example command lines.
 
 ## Publishing a new release
 
-* Change release name in images.py, and add it to tpls/tpl.README.md
-* Update the READMEs and Dockerfiles for the individual images
+If we are publishing 2017.0.0 build number 2, then the docker image will have 3
+tags: 2017.0.0-2, 2017.0.0, latest. An automated build on docker hub is
+triggered by pushing a tag to this repo. The tag has the form 2017.0.0-2.
+
+* Change update_number & build_number in images.py, and add it to tpls/tpl.README.md
+* Regenerate the READMEs and Dockerfiles for the individual images
 
         python images.py --gen all
 
 * Commit changes
 * Tag with the release name
 
-        git tag -a 2017.0.0 -m 'new release'
+        git tag -a 2017.0.0-2 -m '2017.0.0-2 release'
 
 * Push changes, this will trigger testing on travis-ci
 
@@ -33,6 +43,6 @@ Will build every image. Look at the test for example command lines.
 
 * When travis-ci testing completes, push the tag
 
-        git push origin 2017.0.0
+        git push origin 2017.0.0-2
 
 * Check later that all builds have completed on docker hub
