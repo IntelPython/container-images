@@ -129,7 +129,7 @@ def main():
     for n in args.conf:
         print('Processing:',n)
         c = Conf(name=n)
-        if args.gen | args.build | args.test:
+        if args.gen:
             print('  gen')
             c.gen()
         if args.build | args.test:
