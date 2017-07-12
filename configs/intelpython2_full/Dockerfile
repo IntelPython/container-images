@@ -31,6 +31,6 @@ MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
 ENV ACCEPT_INTEL_PYTHON_EULA=yes
 
 RUN conda config --add channels intel \
-    && conda install -y -q intelpython2_full=2017.0.3=1 python=2 \
+    && conda install -y -q intelpython2_full=2017.0.3=3 python=2 \
     && apt-get update -qqq \
     && apt-get install -y -q g++

@@ -78,7 +78,7 @@ class Conf(dict):
         # github tag & docker tag is update_number-build_number, e.g. 2017.0.1-1
         # conda package spec is update_number=build_number, e.g. intelpython2_core=2017.0.1=1
         self['update_number'] = '2017.0.3'
-        self['build_number'] = '1'
+        self['build_number'] = '3'
 
     def name(self):
         return 'intelpython%d_%s' % (self['pyver'],self['package'])
