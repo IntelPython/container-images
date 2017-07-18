@@ -70,7 +70,7 @@ def parse_name(name):
 
 class Conf(dict):
     '''Docker image configuration'''
-    def __init__(self,pyver=None,package=None,name=None):
+    def __init__(self,pyver=None,package=None,build_number=None,name=None):
         if name:
             (pyver,package) = parse_name(name)
         self['pyver'] = pyver
@@ -78,7 +78,8 @@ class Conf(dict):
         # github tag & docker tag is update_number-build_number, e.g. 2017.0.1-1
         # conda package spec is update_number=build_number, e.g. intelpython2_core=2017.0.1=1
         self['update_number'] = '2017.0.3'
-        self['build_number'] = '3'
+        if build_number:
+            self['build_number'] = '=' + str(build_number)
 
     def name(self):
         return 'intelpython%d_%s' % (self['pyver'],self['package'])
@@ -100,11 +101,18 @@ class Conf(dict):
         subprocess.check_call(cmd, shell=True)
 
 # Add new configurations here
-all_confs = [Conf(2,'core'),
-             Conf(2,'full'),
-             Conf(3,'core'),
-             Conf(3,'full')
+all_confs = [Conf(2,'core',3),
+             Conf(2,'full',1),
+             Conf(3,'core',3),
+             Conf(3,'full',1)
 ]
+
+def get_conf(name):
+    for c in all_confs:
+        if c.name() == name:
+            return c
+    print('Could not find conf: ',name)
+    return None
 
 def main():
     conf_names = [conf.name() for conf in all_confs]
@@ -128,7 +136,7 @@ def main():
 
     for n in args.conf:
         print('Processing:',n)
-        c = Conf(name=n)
+        c = get_conf(n)
         if args.gen:
             print('  gen')
             c.gen()
