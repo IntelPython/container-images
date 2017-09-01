@@ -30,7 +30,7 @@ MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
 
 ENV ACCEPT_INTEL_PYTHON_EULA=yes
 
-RUN conda config --add channels intel \
-    && conda install -y -q intelpython3_full=2017.0.3=1 python=3 \
+RUN conda config --add channels intel\
+    && conda install -c intel/label/test -y -q intelpython3_full=2018.0.0 python=3 \
     && apt-get update -qqq \
     && apt-get install -y -q g++

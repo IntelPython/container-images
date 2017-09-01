@@ -1,0 +1,161 @@
+commit 471b52497a5c34a3b54a8c5dcca8ef812e9decd7
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Tue Jul 18 15:41:57 2017 -0500
+
+    allow different build numbers
+
+commit eb8dba80b4678450e94f28706e894150101dd0f4
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Wed Jul 12 13:18:40 2017 -0500
+
+    2017.0.3-3 release
+
+commit 13f4e03d790bc378b1cf2add921f80c902156fbe
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Jun 15 08:16:50 2017 -0500
+
+    add g++ and u3 build 1
+
+commit 4ff819b4c4fa28d7db1c64f039f1e1e2b0f63a2d
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Mon May 15 09:38:54 2017 -0500
+
+    dockerhub does not regenerate the files, so do not generate when testing
+
+commit 98239b6cf77f736d294f985778dbd7a696887e94
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Mon May 15 08:32:18 2017 -0500
+
+    core packages are build 1
+
+commit 8a64de2aac1a5ff87f368b02fc81e20ef20aa790
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Mon May 15 08:21:49 2017 -0500
+
+    2017 update 3
+
+commit a6f393ee3188eb76239eb0952d4baff3eabe3bbd
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sat Apr 1 08:53:00 2017 -0500
+
+    fix up license/copyrights
+
+commit 819770901391991c899d25d22343522bfa18ec5e
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Feb 23 12:08:14 2017 -0600
+
+    2017.0.-0 release
+
+commit 0075c3555c0b5ccb5606078c9855d6ce1e84744a
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sun Nov 27 08:12:20 2016 -0600
+
+    2017.0.1-1
+
+commit 03cc6b3e5de09c5823f02e5e1b399b2aa65a2f2f
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sun Nov 27 07:49:31 2016 -0600
+
+    fix handling of build number, better documentation
+
+commit 7c649801034f52da029d12e241bf468ab95f8c58
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sun Nov 27 07:10:46 2016 -0600
+
+    2017.0.0-2
+
+commit 472e5cf041f5814f34b72f8a1984ec2909f9d890
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sat Nov 26 12:54:57 2016 -0600
+
+    2017.0.1 release
+
+commit 0130d352fc51952a05f42e215109878c7f0cb13d
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sat Nov 26 12:11:59 2016 -0600
+
+    update docs
+
+commit ec58e2600c4574391295729adda8c2ea2c43db12
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sat Nov 26 11:40:39 2016 -0600
+
+    doc changes
+
+commit 7fa5e1c8ab276f5b8cd380db359ca7cc7fe10644
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sat Nov 26 11:21:01 2016 -0600
+
+    update documentation
+
+commit 9164bc28296b83852d8143a71039ba1644854e1f
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sat Nov 26 10:59:59 2016 -0600
+
+    add post_push tag to latest,move configs & tpls into subdirectories
+
+commit 89e792307315d39467f7e93bb31c937b35a1a805
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Sat Nov 26 10:03:42 2016 -0600
+
+    refactor, rename images, install in root conda env
+
+commit 9ec205565c8e74cc664bebcdf58260c064b7da09
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 12:22:47 2016 -0600
+
+    2017.0.1 release
+
+commit d4685ff265d06856fb35f07267a9e98ac926a383
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 11:49:29 2016 -0600
+
+    remove symlinks because dockerhub does not handle them
+
+commit bfbc3cc52329c560e1cf0a3b80489ad46e39dee5
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 11:04:48 2016 -0600
+
+    2017.0.1 release
+
+commit c55ad7a45afc9b95f9b1a3b875bb3765394e6a7c
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 10:50:00 2016 -0600
+
+    no requirements.txt
+
+commit b04c99fdf66b220cc7458f54c4fcc55a03e36023
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 10:45:12 2016 -0600
+
+    add travis-ci
+
+commit 46de0f54aaae1c410d4c7871ca417823179185c1
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 10:30:07 2016 -0600
+
+    update README
+
+commit 6f7996cc1b367f17181c3a2b5d1de4244fa5f7d2
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 10:19:52 2016 -0600
+
+    common readme full packages
+
+commit 7b740c3bde736e3da29c85f7b52337ce8f48088f
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 09:33:15 2016 -0600
+
+    idp2/3_core
+
+commit 14e429e8d791409b38e4de032d2fb554d51cbd30
+Author: Robert Cohn <Robert.S.Cohn@intel.com>
+Date:   Thu Nov 24 08:56:48 2016 -0600
+
+    initial
+
+commit fe007d84638b592665c20dbfe7790d4cae7f29f3
+Author: rscohn2 <rscohn2@gmail.com>
+Date:   Thu Nov 24 09:42:32 2016 -0500
+
+    Initial commit

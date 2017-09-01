@@ -13,10 +13,11 @@ You usually want the 'latest' tag, but the docker image tag can be used to reque
 
         docker pull intelpython2_core:2017.0.3-1
 
-Will get an image that uses the conda package: intelpython3_core-2017.0.3-3
+Will get an image that uses the conda package: intelpython3_core-2017.0.3-1
 
 Tags:
 
+* 2018.0.0-0, 2018.0.0, latest
 * 2017.0.3-3, 2017.0.3, latest
 * 2017.0.3-1
 * 2017.0.3-0

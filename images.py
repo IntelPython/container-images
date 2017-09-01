@@ -77,7 +77,7 @@ class Conf(dict):
         self['package'] = package
         # github tag & docker tag is update_number-build_number, e.g. 2017.0.1-1
         # conda package spec is update_number=build_number, e.g. intelpython2_core=2017.0.1=1
-        self['update_number'] = '2017.0.3'
+        self['update_number'] = '2018.0.0'
         if build_number:
             self['build_number'] = '=' + str(build_number)
 
@@ -101,10 +101,10 @@ class Conf(dict):
         subprocess.check_call(cmd, shell=True)
 
 # Add new configurations here
-all_confs = [Conf(2,'core',3),
-             Conf(2,'full',1),
-             Conf(3,'core',3),
-             Conf(3,'full',1)
+all_confs = [Conf(2,'core',0),
+             Conf(2,'full',0),
+             Conf(3,'core',0),
+             Conf(3,'full',0)
 ]
 
 def get_conf(name):
@@ -126,6 +126,8 @@ def main():
     parser.add_argument('--test',
                         action='store_true',
                         help='Test docker image')
+    parser.add_argument('--install-args',
+                        help='extra args for conda install')
     parser.add_argument('conf',
                         choices=['all'] + conf_names,
                         nargs='*', 
@@ -137,6 +139,8 @@ def main():
     for n in args.conf:
         print('Processing:',n)
         c = get_conf(n)
+        if args.install_args:
+            c['install_args'] = args.install_args
         if args.gen:
             print('  gen')
             c.gen()
