@@ -27,7 +27,7 @@ If we are publishing 2017.0.0 build number 2, then the docker image will have 3
 tags: 2017.0.0-2, 2017.0.0, latest. An automated build on docker hub is
 triggered by pushing a tag to this repo. The tag has the form 2017.0.0-2.
 
-* Change update_number & build_number in images.py, and add it to tpls/tpl.README.md
+* Change update_number & build_number in images.py, and add it to tpls/tpl.README.md. Build number is the third argument in all_confs
 * Regenerate the READMEs and Dockerfiles for the individual images
 
         python images.py --gen all
