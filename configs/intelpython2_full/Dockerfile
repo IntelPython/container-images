@@ -34,3 +34,5 @@ RUN conda config --add channels intel\
     && conda install  -y -q intelpython2_full=2018.0.1 python=2 \
     && apt-get update -qqq \
     && apt-get install -y -q g++
+
+CMD ["python"]

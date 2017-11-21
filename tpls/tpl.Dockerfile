@@ -34,3 +34,6 @@ RUN conda config --add channels intel\
     && conda install {{install_args}} -y -q intelpython{{pyver}}_{{package}}={{update_number}}{{build_number}} python={{pyver}} \
     && apt-get update -qqq \
     && apt-get install -y -q g++
+
+CMD ["python"]
+
