@@ -1,6 +1,6 @@
 Docker images for [Intel Distribution for Python](https://software.intel.com/en-us/intel-distribution-for-python)
 
-The image defaults to starting with a bash shell. Intel Python is on the path. There is 1 image for every install configuration.
+The image defaults to starting with a python interpreter. There is 1 image for every install configuration.
 
 Images:
 
