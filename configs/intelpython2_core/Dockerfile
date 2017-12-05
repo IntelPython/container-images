@@ -34,7 +34,6 @@ RUN conda config --add channels intel\
     && conda install  -y -q intelpython2_core=2018.0.1 python=2 \
     && conda clean --all \
     && apt-get update -qqq \
-    && apt-get install -y -q g++
     && apt-get install -y -q g++ \
     && apt-get autoremove
 
