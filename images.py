@@ -102,9 +102,9 @@ class Conf(dict):
 
 # Add new configurations here
 all_confs = [Conf(2,'core',0),
-             Conf(2,'full',0),
-             Conf(3,'core',0),
-             Conf(3,'full',0)
+             Conf(2,'full',2),
+             Conf(3,'core',1),
+             Conf(3,'full',1)
 ]
 
 def get_conf(name):
