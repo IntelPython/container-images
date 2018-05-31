@@ -77,7 +77,7 @@ class Conf(dict):
         self['package'] = package
         # github tag & docker tag is update_number-build_number, e.g. 2017.0.1-1
         # conda package spec is update_number=build_number, e.g. intelpython2_core=2017.0.1=1
-        self['update_number'] = '2018.0.2'
+        self['update_number'] = '2018.0.3'
         if build_number:
             self['build_number'] = '=' + str(build_number)
 
@@ -102,9 +102,9 @@ class Conf(dict):
 
 # Add new configurations here
 all_confs = [Conf(2,'core',0),
-             Conf(2,'full',2),
-             Conf(3,'core',1),
-             Conf(3,'full',1)
+             Conf(2,'full',0),
+             Conf(3,'core',0),
+             Conf(3,'full',0)
 ]
 
 def get_conf(name):
