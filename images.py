@@ -2,7 +2,7 @@
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
-# 
+#
 #     * Redistributions of source code must retain the above copyright notice,
 #       this list of conditions and the following disclaimer.
 #     * Redistributions in binary form must reproduce the above copyright
@@ -11,7 +11,7 @@
 #     * Neither the name of Intel Corporation nor the names of its contributors
 #       may be used to endorse or promote products derived from this software
 #       without specific prior written permission.
-# 
+#
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 # AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 # IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -77,7 +77,7 @@ class Conf(dict):
         self['package'] = package
         # github tag & docker tag is update_number-build_number, e.g. 2017.0.1-1
         # conda package spec is update_number=build_number, e.g. intelpython2_core=2017.0.1=1
-        self['update_number'] = '2018.0.3'
+        self['update_number'] = '2019.0.0'
         if build_number:
             self['build_number'] = '=' + str(build_number)
 
@@ -130,7 +130,7 @@ def main():
                         help='extra args for conda install')
     parser.add_argument('conf',
                         choices=['all'] + conf_names,
-                        nargs='*', 
+                        nargs='*',
                         help='list of confs to generate')
     args = parser.parse_args()
     if args.conf[0] == 'all':
@@ -150,6 +150,6 @@ def main():
         if args.test:
             print('  test')
             c.test()
-            
+
 
 main()
