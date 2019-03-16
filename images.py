@@ -50,6 +50,7 @@ class Templates():
         self._readme = env.get_template('tpl.README.md')
         self._dockerfile = env.get_template('tpl.Dockerfile')
         self._post_push = env.get_template('tpl.post_push')
+        self._test = env.get_template('tpl.docker-compose.test.yml')
 
     def render(self, conf):
         name = conf.name()
@@ -57,6 +58,8 @@ class Templates():
             fh.write(self._readme.render(conf).encode('utf-8'))
         with open('configs/%s/Dockerfile' % name,'wb') as fh:
             fh.write(self._dockerfile.render(conf).encode('utf-8'))
+        with open('configs/%s/docker-compose.test.yml' % name,'wb') as fh:
+            fh.write(self._test.render(conf).encode('utf-8'))
         with open('configs/%s/hooks/post_push' % name,'wb') as fh:
             fh.write(self._post_push.render(conf).encode('utf-8'))
 
