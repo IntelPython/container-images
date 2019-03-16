@@ -36,13 +36,7 @@ triggered by pushing a tag to this repo. The tag has the form 2017.0.0-2.
 * Tag with the release name
 
         git tag -a 2017.0.0-2 -m '2017.0.0-2 release'
-
-* Push changes, this will trigger testing on travis-ci
-
         git push
-
-* When travis-ci testing completes, push the tag
-
         git push origin 2017.0.0-2
 
 * Check later that all builds have completed on docker hub
