@@ -46,3 +46,16 @@ triggered by pushing a tag to this repo. The tag has the form 2017.0.0-2.
         git push origin 2017.0.0-2
 
 * Check later that all builds have completed on docker hub
+
+## dockerhub config
+
+We use the dockerhub autotesting to test every pull request. When you
+push a tag, it will build, test, and publish a new container with a
+corresponding tag.
+
+Dockerhub build rule:
+
+source type: tag
+source: /.*/
+docker tag {sourceref}
+dockerfile location: configs/intelpython2_core
