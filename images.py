@@ -37,7 +37,7 @@ import sys
 def get_proxies():
     '''Pass through proxies to docker container'''
     proxies = ''
-    for var in ['http_proxy','https_proxy','no_proxy']:
+    for var in ['http_proxy','https_proxy','socks_proxy','ftp_proxy','no_proxy']:
         if var in os.environ:
             proxies += ' --build-arg %s=%s' % (var,os.environ[var])
     return proxies
@@ -80,7 +80,7 @@ class Conf(dict):
         self['package'] = package
         # github tag & docker tag is update_number-build_number, e.g. 2017.0.1-1
         # conda package spec is update_number=build_number, e.g. intelpython2_core=2017.0.1=1
-        self['update_number'] = '2019.3'
+        self['update_number'] = '2019.4'
         if build_number:
             self['build_number'] = '=' + str(build_number)
 
