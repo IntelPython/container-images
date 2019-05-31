@@ -18,7 +18,7 @@ Will build every image. Look at the test for example command lines.
 ## Adding an image
 
 * copy one of the the existing directories
-* See .travis.yml & images.py for directions on adding a new configuration
+* See images.py for directions on adding a new configuration
 * create a new automated build on docker hub, copying build setting of existing image
 
 ## Publishing a new release
