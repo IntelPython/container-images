@@ -1,7 +1,0 @@
-#! /bin/bash
-
-docker tag $DOCKER_REPO:$DOCKER_TAG $DOCKER_REPO:2019.4
-docker push $DOCKER_REPO:2019.4
-
-docker tag $DOCKER_REPO:$DOCKER_TAG $DOCKER_REPO:latest
-docker push $DOCKER_REPO:latest
