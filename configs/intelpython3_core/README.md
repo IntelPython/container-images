@@ -15,7 +15,9 @@ Will get an image that uses the conda package: intelpython3_core-2017.0.3-1
 
 Tags:
 
-* 2019.4, latest
+* 2020.0
+* 2019.5
+* 2019.4
 * 2019.3
 * 2019.1-0
 * 2019.0.0-0b, 2019.0.0-0a, 2019.0.0-0, 2019.0.0
