@@ -1,3 +1,6 @@
 By downloading and using this container and the included software, you 
 agree to the terms and conditions of the software license agreements located 
-at: https://software.intel.com/en-us/license/intel-simplified-software-license
+at: https://software.intel.com/en-us/license/intel-simplified-software-license.
+
+This also includes all TPP included in a container or all TPP that a script
+will install on a user's computer.
