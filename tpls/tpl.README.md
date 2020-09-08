@@ -31,3 +31,5 @@ Tags:
 * 2017.0.2-0, 2017.0.2
 * 2017.0.1-1, 2017.0.1
 * 2017.0.0-2, 2017.0.0
+
+LEGAL NOTICE: By accessing, downloading or using this software and any required dependent software (the "Software Package"), you agree to the terms and conditions of the software license agreements for the Software Package, which may also include notices, disclaimers, or license terms for third party software included with the Software Package. Please refer to the "third-party-programs.txt" or other similarly-named text file for additional details.
