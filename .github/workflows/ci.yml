@@ -9,7 +9,7 @@ jobs:
   runs-on: ubuntu-latest
   strategy:
     fail-fast: false
-    matrix;
+    matrix:
       include:
       - IDP_CONF: intelpython3_core
       - IDP_CONF: intelpython3_full
