@@ -6,18 +6,18 @@ defaults:
 
 jobs:
   build:
-  runs-on: ubuntu-latest
-  strategy:
-    fail-fast: false
-    matrix:
-      include:
-      - IDP_CONF: intelpython3_core
-      - IDP_CONF: intelpython3_full
-  steps:
-  - uses: actions/checkout@v2
-  - uses: actions/setup-python@v2
-    with:
-      python-version: '3.x'
-  - name: Build and test
-    run: |
-      python images.py --test ${{ matrix.IDP_CONF }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - IDP_CONF: intelpython3_core
+        - IDP_CONF: intelpython3_full
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Build and test
+      run: |
+        python images.py --test ${{ matrix.IDP_CONF }}
