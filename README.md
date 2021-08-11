@@ -1,5 +1,7 @@
 # container-images
 
+[![.github/workflows/ci.yml](https://github.com/IntelPython/container-images/actions/workflows/ci.yml/badge.svg)](https://github.com/IntelPython/container-images/actions/workflows/ci.yml)
+
 Dockerfiles and build contexts for building docker images
 
 There is 1 subdirectory for every image to build. Dockerfiles and build
