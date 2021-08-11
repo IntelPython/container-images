@@ -1,0 +1,26 @@
+on: [push, pull_request]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - IDP_CONF: intelpython3_core
+        - IDP_CONF: intelpython3_full
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: Build and test
+      run: |
+        python images.py --test ${{ matrix.IDP_CONF }}
