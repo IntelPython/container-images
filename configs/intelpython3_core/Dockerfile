@@ -34,5 +34,4 @@ RUN conda config --add channels intel\
     && conda install  -y -q intelpython3_core=2021.3 python=3 \
     && conda clean --all \
     && apt-get update -qqq \
-    && apt-get install -y -q g++ \
     && apt-get autoremove
