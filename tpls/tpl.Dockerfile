@@ -30,9 +30,7 @@ MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
 
 ENV ACCEPT_INTEL_PYTHON_EULA=yes
 
-RUN conda config --add channels intel\
-    && conda install {{install_args}} -y -q intelpython{{pyver}}_{{package}}={{update_number}}{{build_number}} python={{pyver}} \
-    && conda clean --all \
-    && apt-get update -qqq \
-    && apt-get autoremove
+RUN conda config --add channels intel
+RUN conda install {{install_args}} -y -q intelpython{{pyver}}_{{package}}={{update_number}}{{build_number}} python={{pyver}}
+RUN conda clean --all
 

@@ -30,8 +30,6 @@ MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
 
 ENV ACCEPT_INTEL_PYTHON_EULA=yes
 
-RUN conda config --add channels intel\
-    && conda install  -y -q intelpython3_core=2021.3 python=3 \
-    && conda clean --all \
-    && apt-get update -qqq \
-    && apt-get autoremove
+RUN conda config --add channels intel
+RUN conda install  -y -q intelpython3_core=2021.3 python=3
+RUN conda clean --all
