@@ -34,7 +34,7 @@ jobs:
       - name: Build and push Docker image for intelpython3_core
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          context: .
+          context: configs/intelpython3_core
           push: true
           tags: ${{ steps.meta_core.outputs.tags }}
           labels: ${{ steps.meta_core.outputs.labels }}
@@ -42,7 +42,7 @@ jobs:
       - name: Build and push Docker image for intelpython3_full
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          context: .
+          context: configs/intelpython3_full
           push: true
           tags: ${{ steps.meta_full.outputs.tags }}
           labels: ${{ steps.meta_full.outputs.labels }}
