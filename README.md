@@ -23,35 +23,30 @@ Will build every image. Look at the test for example command lines.
 * See images.py for directions on adding a new configuration
 * create a new automated build on docker hub, copying build setting of existing image
 
-## Publishing a new release
+## Publishing a new release (Internal Use Only)
+
+Disclaimer: Do NOT do this unless all packages for upcoming release have been
+uploaded to Intel channel on Anaconda Cloud. Best time to do this is right before
+FCS when all packages have automatically been uploaded and validated.
 
 If we are publishing 2017.0.0 build number 2, then the docker image will have 3
-tags: 2017.0.0-2, 2017.0.0, latest. An automated build on docker hub is
-triggered by pushing a tag to this repo. The tag has the form 2017.0.0-2.
+tags: 2017.0.0-2, 2017.0.0, latest. Github Actions will create a Docker image
+after a PR is merged. The following steps are all that is needed to update our
+Dockerhub with our latest IntelPython.
 
-* Change update_number & build_number in images.py, and add it to tpls/tpl.README.md. Build number is the third argument in all_confs
-* Regenerate the READMEs and Dockerfiles for the individual images
+* Change update_number & build_number in images.py. Most of the time, the build number
+  remains the same (#0) and the minor version is incremented (e.g. 2021.1.0 -> 2021.2.0)
+* Regenerate the READMEs and Dockerfiles for the individual images by running the following
+  command
 
         python images.py --gen all
 
-* Commit changes
+* Create branch and commit changes
 * Tag with the release name
 
-        git tag -a 2017.0.0-2 -m '2017.0.0-2 release'
-        git push
-        git push origin 2017.0.0-2
+        git tag -a 2022.0.0-0 -m '2022.0.0-0 release'
+        git push origin update/2022.0.0-0
+        git push origin 2022.0.0-0
 
-* Check later that all builds have completed on docker hub
-
-## dockerhub config
-
-We use the dockerhub autotesting to test every pull request. When you
-push a tag, it will build, test, and publish a new container with a
-corresponding tag.
-
-Dockerhub build rule:
-
-source type: tag
-source: /.*/
-docker tag {sourceref}
-dockerfile location: configs/intelpython2_core
+* Create PR, check that tests pass, and then merge PR. Github actions has been setup to
+  automatically build the Docker image and push it to Dockerhub afterwards.
