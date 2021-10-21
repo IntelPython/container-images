@@ -25,6 +25,10 @@ Will build every image. Look at the test for example command lines.
 
 ## Publishing a new release (Internal Use Only)
 
+Disclaimer: Do NOT do this unless all packages for upcoming release have been
+uploaded to Intel channel on Anaconda Cloud. Best time to do this is right before
+FCS when all packages have automatically been uploaded and validated.
+
 If we are publishing 2017.0.0 build number 2, then the docker image will have 3
 tags: 2017.0.0-2, 2017.0.0, latest. Github Actions will create a Docker image
 after a PR is merged. The following steps are all that is needed to update our
