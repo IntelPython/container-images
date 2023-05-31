@@ -27,5 +27,5 @@ FROM continuumio/miniconda3
 
 
 RUN conda config --add channels intel
-RUN conda install  -y -q intelpython3_full
+RUN conda install  -y -q intelpython3_full=2023.1
 RUN conda clean --all
