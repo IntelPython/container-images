@@ -27,5 +27,5 @@ FROM condaforge/mambaforge
 
 RUN conda config --add channels https://software.repos.intel.com/python/conda
 RUN conda config --add channels conda-forge
-RUN conda install  -y -q intelpython3_full=2025.0 python=3.12
+RUN conda install  -y -q intelpython3_full=2025.0 python=3.11
 RUN conda clean --all

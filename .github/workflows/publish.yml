@@ -26,7 +26,7 @@ jobs:
         id: meta_full
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: intelpython/intelpython3_full
+          images: intel/python
 
       - name: Build and push Docker image for intelpython3_full
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
