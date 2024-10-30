@@ -14,7 +14,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - IDP_CONF: intelpython3_core
         - IDP_CONF: intelpython3_full
     steps:
     - uses: actions/checkout@v2

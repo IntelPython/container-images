@@ -22,25 +22,11 @@ jobs:
           username: ${{ secrets.DOCKER_LOGIN_USERNAME }}
           password: ${{ secrets.DOCKER_LOGIN_PASSWORD }}
       
-      - name: Extract intelpython3_core metadata (tags, labels) for Docker
-        id: meta_core
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
-        with:
-          images: intelpython/intelpython3_core
-      
       - name: Extract intelpython3_full metadata (tags, labels) for Docker
         id: meta_full
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
           images: intelpython/intelpython3_full
-
-      - name: Build and push Docker image for intelpython3_core
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
-        with:
-          context: configs/intelpython3_core
-          push: true
-          tags: ${{ steps.meta_core.outputs.tags }}
-          labels: ${{ steps.meta_core.outputs.labels }}
 
       - name: Build and push Docker image for intelpython3_full
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
