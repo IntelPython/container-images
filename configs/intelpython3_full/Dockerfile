@@ -23,9 +23,9 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-FROM continuumio/miniconda3
+FROM condaforge/mambaforge
 
-
-RUN conda config --add channels intel
-RUN conda install  -y -q intelpython3_full=2023.1
+RUN conda config --add channels https://software.repos.intel.com/python/conda
+RUN conda config --add channels conda-forge
+RUN conda install  -y -q intelpython3_full=2025.0 python=3.12
 RUN conda clean --all

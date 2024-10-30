@@ -4,14 +4,13 @@ The image defaults to starting with a bash shell. Intel Python is on the path. T
 
 Images:
 
-* intelpython3_core
 * intelpython3_full
 
 You usually want the 'latest' tag, but the docker image tag can be used to request a specific package. For example:
 
-        docker pull intelpython3_core:2017.0.3-1
+        docker pull intelpython3_full:2017.0.3-1
 
-Will get an image that uses the conda package: intelpython3_core-2017.0.3-1
+Will get an image that uses the conda package: intelpython3_full-2017.0.3-1
 
 Tags:
 
